@@ -58,12 +58,12 @@ def post_init_hook(cr, registry):
     env['project.task'].sudo()._set_default_task_type_id()
 
     # and set ``type_id`` field to not null
-    cr.execute("ALTER TABLE project_task ALTER COLUMN type_id SET NOT NULL;")
+    #cr.execute("ALTER TABLE project_task ALTER COLUMN type_id SET NOT NULL;")
 
     # Set default task priority to the existing tasks
     env['project.task'].sudo()._set_default_task_priority_id()
 
     # and set ``priority_id`` field to not null
-    cr.execute(
-        "ALTER TABLE project_task ALTER COLUMN priority_id SET NOT NULL;"
-    )
+    #cr.execute(
+    #    "ALTER TABLE project_task ALTER COLUMN priority_id SET NOT NULL;"
+    #)
